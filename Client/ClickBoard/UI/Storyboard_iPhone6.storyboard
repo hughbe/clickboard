@@ -1,0 +1,1167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="oZs-wQ-RFv">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="5gR-Qh-8K9">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="oZs-wQ-RFv" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="swY-7P-8a6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eHH-cM-r1A" kind="relationship" relationship="rootViewController" id="bYb-ZU-WFn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mWW-Sv-0FS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1131.5" y="743.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0vT-Ng-pOh">
+            <objects>
+                <viewController storyboardIdentifier="ClickBoard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jHm-SE-4jU" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="plt-B7-dLO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" id="bv9-PP-o4j" userLabel="Background Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="dS1-D6-Ynv" userLabel="Landscape">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="LnB-CO-LAg" userLabel="Portrait">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="BoN-PZ-DFM">
+                                        <rect key="frame" x="137" y="630" width="101" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="pageViewChanged:" destination="jHm-SE-4jU" eventType="valueChanged" id="Nuf-zY-o2Q"/>
+                                        </connections>
+                                    </pageControl>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" id="9zB-1r-2Li">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="382"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" id="ACL-fc-fxF">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="382"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="W4H-kn-xB5" userLabel="Left click">
+                                                        <rect key="frame" x="0.0" y="6" width="188" height="370"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" image="rightbutton.png">
+                                                            <string key="title">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</string>
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="leftDown:" destination="jHm-SE-4jU" eventType="touchDown" id="Ao6-45-emF"/>
+                                                            <action selector="leftUp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="2SJ-4C-qah"/>
+                                                            <action selector="leftUp:" destination="jHm-SE-4jU" eventType="touchUpOutside" id="9La-t5-4pS"/>
+                                                            <action selector="leftUp:" destination="jHm-SE-4jU" eventType="touchCancel" id="FUj-sn-YEe"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="NQa-ta-WDJ" userLabel="Right click">
+                                                        <rect key="frame" x="187" y="6" width="188" height="370"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" image="leftbutton.png">
+                                                            <string key="title">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</string>
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="right:" destination="jHm-SE-4jU" eventType="touchUpInside" id="Pe5-9z-TXX"/>
+                                                            <action selector="right:" destination="jHm-SE-4jU" eventType="touchUpOutside" id="nOc-Qc-JcA"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="EjF-R1-WQt">
+                                                <rect key="frame" x="375" y="0.0" width="375" height="382"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4bP-B1-vJT">
+                                                        <rect key="frame" x="27" y="156" width="320" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
+                                                        <state key="normal" title="Click to select apps layout">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="appsView:" destination="jHm-SE-4jU" eventType="touchUpInside" id="CR1-HF-oGi"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3eJ-k2-GeZ">
+                                                        <rect key="frame" x="27" y="196" width="320" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                        <state key="normal" title="Change Apps Order">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="L2x-J2-ZYt" kind="push" id="O6s-ho-XFt"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                    </scrollView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" id="Nca-iJ-loI" userLabel="Widgets Scroll View">
+                                        <rect key="frame" x="0.0" y="380" width="375" height="287"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view tag="200" contentMode="scaleToFill" id="5X5-Ne-4N0" userLabel="Settings">
+                                                <rect key="frame" x="-375" y="0.0" width="375" height="287"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opacity:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vwt-Bx-8o8">
+                                                        <rect key="frame" x="35" y="134" width="75" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colour:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dQA-b5-2Wr">
+                                                        <rect key="frame" x="35" y="172" width="75" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.30000001192092896" minValue="0.0" maxValue="1" id="ibn-XK-njy" customClass="ScrollSlider">
+                                                        <rect key="frame" x="116" y="134" width="225" height="31"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="thumbTintColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="changeOpacity:" destination="jHm-SE-4jU" eventType="valueChanged" id="kla-Nv-7k7"/>
+                                                        </connections>
+                                                    </slider>
+                                                    <button opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" id="c3l-xU-yk2">
+                                                        <rect key="frame" x="118" y="172" width="221" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="XXXXXXXXXXXXXXXXXXXXXXXX">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="changeForeground:" destination="jHm-SE-4jU" eventType="touchUpInside" id="8mo-cg-DiI"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wCi-g3-lhJ">
+                                                        <rect key="frame" x="35" y="86" width="304" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="Change Background">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="changeBackground:" destination="jHm-SE-4jU" eventType="touchUpInside" id="jIu-zC-qz6"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view tag="201" contentMode="scaleToFill" id="hmb-s5-hvg" userLabel="Actions">
+                                                <rect key="frame" x="-375" y="0.0" width="375" height="287"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="k4R-Zl-o17" userLabel="Help Actions">
+                                                        <rect key="frame" x="335" y="8" width="32" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" backgroundImage="help.png">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="helpActions:" destination="jHm-SE-4jU" eventType="touchUpInside" id="JPH-Tu-48e"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qMh-wa-TRt">
+                                                        <rect key="frame" x="35" y="35" width="304" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="30"/>
+                                                        <state key="normal" title="Lock">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="taskManagerAction:" destination="jHm-SE-4jU" eventType="touchUpInside" id="pY7-wk-l8c"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qST-Mx-3Q4">
+                                                        <rect key="frame" x="35" y="87" width="304" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="30"/>
+                                                        <state key="normal" title="Shutdown">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="taskManagerAction:" destination="jHm-SE-4jU" eventType="touchUpInside" id="pl6-kX-4Sl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1Ac-Ml-lxZ">
+                                                        <rect key="frame" x="35" y="139" width="304" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="30"/>
+                                                        <state key="normal" title="Restart">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="taskManagerAction:" destination="jHm-SE-4jU" eventType="touchUpInside" id="FP6-pM-m5g"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Yme-fk-SOd">
+                                                        <rect key="frame" x="35" y="191" width="304" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="30"/>
+                                                        <state key="normal" title="Hibernate">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="taskManagerAction:" destination="jHm-SE-4jU" eventType="touchUpInside" id="iUC-SW-Qhl"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view tag="202" contentMode="scaleToFill" id="sea-2R-UbW" userLabel="Media">
+                                                <rect key="frame" x="-375" y="0.0" width="375" height="287"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e9g-ba-QCq">
+                                                        <rect key="frame" x="8" y="52" width="94" height="25"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <state key="normal" title="Prev">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="previousTrack:" destination="jHm-SE-4jU" eventType="touchUpInside" id="OKA-Hu-dUx"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ktB-Aj-xEY">
+                                                        <rect key="frame" x="117" y="52" width="130" height="25"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <state key="normal" title="Play">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="playPauseTrack:" destination="jHm-SE-4jU" eventType="touchUpInside" id="4T6-I6-upX"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kO5-Yw-7hu">
+                                                        <rect key="frame" x="273" y="52" width="94" height="25"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <state key="normal" title="Next">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="nextTrack:" destination="jHm-SE-4jU" eventType="touchUpInside" id="1lI-FV-sBQ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" id="Q7x-fm-Ysb" customClass="ScrollSlider">
+                                                        <rect key="frame" x="6" y="89" width="363" height="31"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="thumbTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="volume:" destination="jHm-SE-4jU" eventType="valueChanged" id="LTU-i5-hcw"/>
+                                                        </connections>
+                                                    </slider>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="FMo-Tj-mfw">
+                                                        <rect key="frame" x="8" y="129" width="359" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="IEb-iD-Rnz">
+                                                        <rect key="frame" x="30" y="167" width="337" height="33"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="dPd-wn-Yq7">
+                                                        <rect key="frame" x="30" y="200" width="337" height="33"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8gJ-bG-OG2" userLabel="Help Media">
+                                                        <rect key="frame" x="335" y="12" width="32" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" backgroundImage="help.png">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="helpMedia:" destination="jHm-SE-4jU" eventType="touchUpInside" id="QrF-op-VEx"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ofy-iV-Man">
+                                                        <rect key="frame" x="122" y="18" width="130" height="20"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <state key="normal" title="Shuffle">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="shuffle:" destination="jHm-SE-4jU" eventType="touchUpInside" id="M1t-yy-By2"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view tag="203" contentMode="scaleToFill" id="8Yl-D2-bzt" userLabel="App Opener">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="287"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xTO-vE-HMb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="253"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <prototypes>
+                                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="2yh-bv-niJ" style="IBUITableViewCellStyleDefault" id="FQ8-PA-4Bp">
+                                                                <rect key="frame" x="0.0" y="22" width="375" height="44"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FQ8-PA-4Bp" id="C2F-aQ-1Yh">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2yh-bv-niJ">
+                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </tableViewCellContentView>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="jHm-SE-4jU" id="WOO-FL-hPg"/>
+                                                            <outlet property="delegate" destination="jHm-SE-4jU" id="iJ9-JB-8rM"/>
+                                                        </connections>
+                                                    </tableView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VxN-rk-asO" userLabel="Help App Opener">
+                                                        <rect key="frame" x="8" y="259" width="20" height="20"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" backgroundImage="help.png">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="helpAppsOpener:" destination="jHm-SE-4jU" eventType="touchUpInside" id="uPZ-GQ-6Qi"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view tag="204" contentMode="scaleToFill" id="2KT-2p-NvC" userLabel="Powerpoint">
+                                                <rect key="frame" x="-375" y="0.0" width="375" height="287"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sLY-1c-Kab" userLabel="Help Powerpoint">
+                                                        <rect key="frame" x="335" y="8" width="32" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" backgroundImage="help.png">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="helpPowerpoint:" destination="jHm-SE-4jU" eventType="touchUpInside" id="SAs-lJ-Ktq"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="C8a-fl-npf" userLabel="Left arrow">
+                                                        <rect key="frame" x="8" y="60" width="180" height="56"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" image="powerpoint left.png">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="powerPointLeft:" destination="jHm-SE-4jU" eventType="touchUpInside" id="1bC-q5-fIX"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OJM-va-QhQ" userLabel="Right arrow">
+                                                        <rect key="frame" x="187" y="59" width="180" height="56"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" image="powerpoint right.png">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="powerPointRight:" destination="jHm-SE-4jU" eventType="touchUpInside" id="s2v-Lc-4sd"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WxK-SG-hvo">
+                                                        <rect key="frame" x="35" y="124" width="304" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <state key="normal" title="Present">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="powerPointPresent:" destination="jHm-SE-4jU" eventType="touchUpInside" id="Cgb-H1-Yjh"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="elk-ml-pC2">
+                                                        <rect key="frame" x="35" y="162" width="304" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <state key="normal" title="End Show">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="powerPointEnd:" destination="jHm-SE-4jU" eventType="touchUpInside" id="PN6-hf-TvH"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view tag="205" contentMode="scaleToFill" id="54t-Mh-6Iy" userLabel="Apps container view">
+                                                <rect key="frame" x="-375" y="0.0" width="375" height="287"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <view hidden="YES" tag="400" contentMode="scaleToFill" id="btY-Rd-BeY" userLabel="2x1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="287"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MNi-Fz-O4L" userLabel="App 0">
+                                                                <rect key="frame" x="15" y="61" width="165" height="165"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="iWE-8n-u06"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="v1G-JY-Hci" userLabel="App 1">
+                                                                <rect key="frame" x="195" y="61" width="165" height="165"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="AMJ-pB-81X"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view hidden="YES" tag="401" contentMode="scaleToFill" id="1Qb-Mu-wAD" userLabel="3X2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="287"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wMX-92-DaU" userLabel="App 0">
+                                                                <rect key="frame" x="15" y="24" width="105" height="105"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="iPS-sm-AcO"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NKh-dx-2cq" userLabel="App 1">
+                                                                <rect key="frame" x="135" y="24" width="105" height="105"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="qAh-5s-gxT"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Xcr-MW-Txm" userLabel="App 2">
+                                                                <rect key="frame" x="255" y="24" width="105" height="105"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="ER3-M1-Mh3"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0NW-Zg-nSf" userLabel="App 3">
+                                                                <rect key="frame" x="15" y="144" width="105" height="105"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="jfq-1y-ZVs"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0G0-IB-0A2" userLabel="App 4">
+                                                                <rect key="frame" x="135" y="144" width="105" height="105"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="Bsv-Ol-lME"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3kV-Fb-qAF" userLabel="App 5">
+                                                                <rect key="frame" x="255" y="144" width="105" height="105"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="9Fw-qe-6zl"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view hidden="YES" tag="403" contentMode="scaleToFill" id="KN8-z9-9Uh" userLabel="4x2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="287"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qiB-vs-Ksm" userLabel="App 0">
+                                                                <rect key="frame" x="15" y="49" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="FbN-KR-hM1"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8RV-gl-gcT" userLabel="App 1">
+                                                                <rect key="frame" x="105" y="49" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="fti-9w-33b"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kGi-h3-0S5" userLabel="App 2">
+                                                                <rect key="frame" x="195" y="49" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="nTB-0L-K5S"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="db1-vf-nEE" userLabel="App 3">
+                                                                <rect key="frame" x="285" y="49" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="w9D-6k-eok"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UoT-0y-cWO" userLabel="App 4">
+                                                                <rect key="frame" x="15" y="144" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="vRF-7o-Sav"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Thb-Ln-l2H" userLabel="App 5">
+                                                                <rect key="frame" x="105" y="144" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="wX0-6k-Hno"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nYl-tv-kGV" userLabel="App 6">
+                                                                <rect key="frame" x="195" y="144" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="CJZ-gz-DSC"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="107" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZQs-J8-wmQ" userLabel="App 7">
+                                                                <rect key="frame" x="285" y="144" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="aVr-T7-MIG"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view hidden="YES" tag="404" contentMode="scaleToFill" id="bOc-pE-Re8" userLabel="3x4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="287"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="z4M-aS-NRi" userLabel="App 0">
+                                                                <rect key="frame" x="15" y="8" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="Sv1-24-c3A"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O07-ao-3WS" userLabel="App 1">
+                                                                <rect key="frame" x="105" y="8" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="Brt-8S-M7X"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wXc-nt-ke9" userLabel="App 2">
+                                                                <rect key="frame" x="195" y="8" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="cf5-V5-WRm"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8Po-BP-Zvx" userLabel="App 3">
+                                                                <rect key="frame" x="285" y="8" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="ps8-51-96D"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IT4-Ut-8IC" userLabel="App 4">
+                                                                <rect key="frame" x="15" y="93" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="e1i-WM-enZ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="q0P-bX-qMm" userLabel="App 5">
+                                                                <rect key="frame" x="105" y="93" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="LD6-0N-gk5"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8Nd-ae-yZr" userLabel="App 6">
+                                                                <rect key="frame" x="195" y="93" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="BVP-ng-vcF"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="107" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gap-YI-4oe" userLabel="App 7">
+                                                                <rect key="frame" x="285" y="93" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="PHr-Vz-cYr"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="108" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ih4-eK-FaF" userLabel="App 8">
+                                                                <rect key="frame" x="15" y="178" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="Vhz-XJ-u4N"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="109" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pzt-Yo-hwL" userLabel="App 9">
+                                                                <rect key="frame" x="105" y="178" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="85J-MB-Kny"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="110" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8k9-TT-18s" userLabel="App 10">
+                                                                <rect key="frame" x="195" y="178" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="axd-Nh-AqG"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="111" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="biH-fv-9fk" userLabel="App 11">
+                                                                <rect key="frame" x="285" y="178" width="75" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="launchApp:" destination="jHm-SE-4jU" eventType="touchUpInside" id="o9j-Tg-cFT"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vvl-3C-IVI" userLabel="Help Apps">
+                                                        <rect key="frame" x="8" y="256" width="24" height="24"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" backgroundImage="help.png">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="helpApps:" destination="jHm-SE-4jU" eventType="touchUpInside" id="NV4-I7-Qjp"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rnm-KZ-jJR" userLabel="Settings">
+                                                        <rect key="frame" x="344" y="256" width="24" height="24"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" backgroundImage="settings1.png">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="appsSettings:" destination="jHm-SE-4jU" eventType="touchUpInside" id="b8J-As-x57"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view tag="206" contentMode="scaleToFill" id="O8l-7U-mHg" userLabel="Keyboard">
+                                                <rect key="frame" x="-375" y="0.0" width="375" height="287"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="8Ze-qp-MVa" customClass="KeyboardTextField">
+                                                        <rect key="frame" x="8" y="109" width="304" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="jHm-SE-4jU" id="DPg-5C-gZQ"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="delegate" destination="jHm-SE-4jU" id="fL7-Wt-W3N"/>
+                                        </connections>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="46w-4Y-ew0"/>
+                    <connections>
+                        <outlet property="apps2x1" destination="btY-Rd-BeY" id="QjL-Mk-N4p"/>
+                        <outlet property="apps3x2" destination="1Qb-Mu-wAD" id="zcU-SG-vVO"/>
+                        <outlet property="apps3x4" destination="bOc-pE-Re8" id="CbC-8o-cXk"/>
+                        <outlet property="apps4x2" destination="KN8-z9-9Uh" id="btb-Sb-wua"/>
+                        <outlet property="appsButton" destination="4bP-B1-vJT" id="V7X-nY-nny"/>
+                        <outlet property="appsGearButton" destination="Rnm-KZ-jJR" id="Hvx-Q5-Qjs"/>
+                        <outlet property="appsViews" destination="EjF-R1-WQt" id="moA-hT-PKf"/>
+                        <outlet property="backgroundView" destination="bv9-PP-o4j" id="mVb-mJ-djV"/>
+                        <outlet property="foregroundColourButton" destination="c3l-xU-yk2" id="AvI-65-2bG"/>
+                        <outlet property="keyboardView" destination="8Ze-qp-MVa" id="FmM-mm-1ST"/>
+                        <outlet property="leftButton" destination="W4H-kn-xB5" id="ypo-V8-i1A"/>
+                        <outlet property="leftPowerpointButton" destination="C8a-fl-npf" id="iHM-ti-dp1"/>
+                        <outlet property="mediaAlbumLabel" destination="dPd-wn-Yq7" id="WNC-77-HSw"/>
+                        <outlet property="mediaArtistLabel" destination="IEb-iD-Rnz" id="qV9-pe-s63"/>
+                        <outlet property="mediaTitleLabel" destination="FMo-Tj-mfw" id="YfJ-uc-1XY"/>
+                        <outlet property="mediaVolumeSlider" destination="Q7x-fm-Ysb" id="opw-45-6Y5"/>
+                        <outlet property="mouseViews" destination="ACL-fc-fxF" id="ORg-8h-YkZ"/>
+                        <outlet property="opacitySlider" destination="ibn-XK-njy" id="a0r-jx-XDM"/>
+                        <outlet property="pageControl" destination="BoN-PZ-DFM" id="dTi-hn-XYj"/>
+                        <outlet property="playPauseMediaButton" destination="ktB-Aj-xEY" id="dbV-Uo-dDP"/>
+                        <outlet property="portraitView" destination="LnB-CO-LAg" id="Js4-It-R0e"/>
+                        <outlet property="rightButton" destination="NQa-ta-WDJ" id="UMC-Y2-uhd"/>
+                        <outlet property="rightPowerpointButton" destination="OJM-va-QhQ" id="ktJ-Tg-KSz"/>
+                        <outlet property="touchpadView" destination="dS1-D6-Ynv" id="qdq-li-55O"/>
+                        <outlet property="upperScrollView" destination="9zB-1r-2Li" id="9PR-8k-glG"/>
+                        <outlet property="widgets" destination="Nca-iJ-loI" id="Jj9-9u-4jW"/>
+                        <outlet property="windowsTableView" destination="xTO-vE-HMb" id="sAJ-d6-gUW"/>
+                        <outletCollection property="widgetArray" destination="5X5-Ne-4N0" id="kwL-CG-TcD"/>
+                        <outletCollection property="widgetArray" destination="54t-Mh-6Iy" id="zWx-ZJ-dou"/>
+                        <outletCollection property="widgetArray" destination="O8l-7U-mHg" id="JsV-VJ-xj5"/>
+                        <outletCollection property="widgetArray" destination="hmb-s5-hvg" id="pbe-rG-C9C"/>
+                        <outletCollection property="widgetArray" destination="2KT-2p-NvC" id="NRb-Rn-k0w"/>
+                        <outletCollection property="widgetArray" destination="sea-2R-UbW" id="ulD-6I-NfL"/>
+                        <outletCollection property="widgetArray" destination="8Yl-D2-bzt" id="MPt-5W-Y7u"/>
+                        <segue destination="Qcz-Me-Klt" kind="push" identifier="colour" id="Epj-nx-uNP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C4u-1Y-lE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-236.5" y="694.5"/>
+        </scene>
+        <!--Pick Color-->
+        <scene sceneID="Jn1-Kw-Ltl">
+            <objects>
+                <viewController id="Qcz-Me-Klt" customClass="ChooseColorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ATu-5y-uQL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="HNa-Ua-Pks">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="uLL-tG-hcJ" customClass="NKOColorPickerView">
+                                <rect key="frame" x="0.0" y="54" width="320" height="514"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pick Color" id="Uwi-fl-7PY">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="IDa-uA-1xO">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancel:" destination="Qcz-Me-Klt" id="fJw-Zm-Lf5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="colorPicker" destination="uLL-tG-hcJ" id="9bc-Tx-xkO"/>
+                        <outlet property="imageView" destination="HNa-Ua-Pks" id="q0H-z0-O6M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fS3-TW-VbN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172.5" y="694.5"/>
+        </scene>
+        <!--Change Apps Order-->
+        <scene sceneID="hnP-Ow-MYx">
+            <objects>
+                <viewController id="L2x-J2-ZYt" customClass="AppSettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wo4-bJ-oE1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qw7-7E-b5M">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="ftj-7E-F9A">
+                                        <rect key="frame" x="0.0" y="86" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ftj-7E-F9A" id="YH9-aw-Nrd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K7Z-6X-6y9">
+                                                    <rect key="frame" x="30" y="0.0" width="282" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="L2x-J2-ZYt" id="X2p-2R-VME"/>
+                                    <outlet property="delegate" destination="L2x-J2-ZYt" id="xqI-EQ-npP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Change Apps Order" id="Auz-z1-c26">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="CDi-Jm-mC9">
+                            <connections>
+                                <action selector="done:" destination="L2x-J2-ZYt" id="wSy-Tg-1qm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="qw7-7E-b5M" id="6f3-e6-0Ol"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o9O-4R-8kd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173" y="1407"/>
+        </scene>
+        <!--Connect View Controller-->
+        <scene sceneID="aUr-VV-j6A">
+            <objects>
+                <viewController id="eHH-cM-r1A" customClass="ConnectViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oU7-D9-WGY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" id="esr-sD-pKc" userLabel="Background Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="22" sectionFooterHeight="22" id="cki-me-5BQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="606"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="H6p-Vt-wgc" rowHeight="57" style="IBUITableViewCellStyleDefault" id="rCR-Om-rTb">
+                                        <rect key="frame" x="0.0" y="22" width="375" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rCR-Om-rTb" id="gJd-na-JVb">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H6p-Vt-wgc">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="More" rowHeight="57" id="t4q-nO-uvR">
+                                        <rect key="frame" x="0.0" y="79" width="375" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t4q-nO-uvR" id="TYl-ei-jVv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="a18-vk-utC">
+                                                    <rect key="frame" x="76" y="3" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="ip_address.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="Text:" destination="eHH-cM-r1A" eventType="touchUpInside" id="LsU-sa-nV2"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JkW-s9-Ztf">
+                                                    <rect key="frame" x="18" y="3" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="qr_code.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="QRCode:" destination="eHH-cM-r1A" eventType="touchUpInside" id="3FD-gm-iHh"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="eHH-cM-r1A" id="igu-eU-0wp"/>
+                                    <outlet property="delegate" destination="eHH-cM-r1A" id="1M9-75-TQ2"/>
+                                </connections>
+                            </tableView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="uFB-r2-hWS">
+                                <rect key="frame" x="0.0" y="546" width="320" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" id="xQT-GN-wFK">
+                                <rect key="frame" x="0.0" y="591" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download the PC app from                    http://www.clickboardapp.com" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NsS-j7-aDS">
+                                        <rect key="frame" x="8" y="0.0" width="312" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open the PC app" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fcU-hI-9v8">
+                                        <rect key="frame" x="383" y="0.0" width="312" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect to the same WiFi network and go" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y3f-Yx-h2v">
+                                        <rect key="frame" x="758" y="0.0" width="312" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="eHH-cM-r1A" id="SpS-2o-GcB"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZKd-8B-hLG"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="esr-sD-pKc" id="Hxg-0I-H2g"/>
+                        <outlet property="instructionsPageControl" destination="uFB-r2-hWS" id="fbR-nj-h2e"/>
+                        <outlet property="instructionsScrollView" destination="xQT-GN-wFK" id="dOz-xd-308"/>
+                        <outlet property="tableView" destination="cki-me-5BQ" id="18z-fq-20V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fED-aU-54A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-668.5" y="743.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.png" width="640" height="1136"/>
+        <image name="help.png" width="128" height="128"/>
+        <image name="ip_address.png" width="128" height="128"/>
+        <image name="leftbutton.png" width="420" height="656"/>
+        <image name="powerpoint left.png" width="320" height="92"/>
+        <image name="powerpoint right.png" width="320" height="92"/>
+        <image name="qr_code.png" width="128" height="128"/>
+        <image name="rightbutton.png" width="420" height="656"/>
+        <image name="settings1.png" width="88" height="88"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
